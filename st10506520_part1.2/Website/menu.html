@@ -3,22 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu | Mutumane Kota 'N' Grilled Chicken</title>
+  <meta name="description" content="Explore Mutumane Kota & Grilled Chicken menu featuring loaded township kotas, flame-grilled chicken, pap meals, and combo box specials in Soshanguve.">
+  <meta name="keywords" content="Kota Menu, Flame Grilled Chicken, Soshanguve Fast Food, Township Kotas, Pap Meals, South Africa Street Food">
+  <title>Menu & Specialities | Mutumane Kota 'N' Grilled Chicken</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
 
-  <!-- LOGO & NAVIGATION BAR -->
+  <!-- HEADER & NAVIGATION -->
   <header>
     <div>
       <a href="index.html">
-        <img src="/Research/Images/LOGO.jpg" alt="Mutumane Logo" width="40" height="40" align="left">
+        <img src="Images/LOGO.jpg" alt="Mutumane Logo" width="40" height="40" align="left">
         <strong>MUTUMANE KOTA 'N' GRILLED CHICKEN</strong>
       </a>
-      <nav align="right">
+      <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="menu.html" style="background-color: var(--fiery-orange); color: var(--white);">Menu</a></li>
+          <li><a href="menu.html" class="active">Menu</a></li>
           <li><a href="orders.html">Orders</a></li>
           <li><a href="aboutUs.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -31,10 +34,15 @@
   <br style="clear: both;">
   <hr>
 
-  <!-- MENU AND SPECIALITIES BANNER -->
-  <div align="center">
+  <!-- MENU BANNER & LIVE SEARCH -->
+  <div align="center" style="padding: 20px;">
     <h1>MENU AND SPECIALITIES</h1>
     <p>Explore our loaded township kotas, flame-grilled chicken, and combo family boxes.</p>
+    
+    <!-- Dynamic Search Feature -->
+    <div style="max-width: 500px; margin: 20px auto 0 auto;">
+      <input type="text" id="menuSearch" placeholder="🔍 Search menu items (e.g., Kota, Chicken, Pap, Russian)..." aria-label="Search menu items">
+    </div>
   </div>
 
   <hr>
@@ -42,20 +50,18 @@
   <!-- MENU GRID CONTAINER -->
   <div class="category-container">
     
-<!-- CARD 1: KOTA SPECIALS -->
+    <!-- CARD 1: KOTA SPECIALS -->
     <div class="card" style="text-align: left;">
       <div align="center">
-        <img src="/Research/Images/kota.jpg" alt="Kota Specials">
+        <img src="Images\kota.jpg" alt="Loaded Township Kota Special with Chips and Garlic">
       </div>
       <h3 style="justify-content: flex-start;">Kota Specials</h3>
-      
       <ol style="padding-left: 20px; color: var(--text-main); font-size: 0.95rem; line-height: 1.8;">   
-        <li>Archaar + Lettuce + Tomato + Cucumber + Chips — <strong>R25</strong></li>
-        <li>Archaar + Lettuce + Tomato + Cucumber + Special Garlic + Vienna + Chips — <strong>R35</strong></li>
-        <li>Archaar + Lettuce + Tomato + Cucumber + Special Garlic +  Russian + Chips — <strong>R45</strong></li>
-        <li> Archaar + Lettuce + Tomato + Cucumber + Special Garlic +  Russian + Egg + Chips — <strong>R60</strong></li>
+        <li>Archaar + Lettuce + Tomato + Chips — <strong>R25</strong></li>
+        <li>Archaar + Special Garlic + Vienna + Chips — <strong>R35</strong></li>
+        <li>Archaar + Special Garlic + Russian + Chips — <strong>R45</strong></li>
+        <li>Archaar + Special Garlic + Russian + Egg + Chips — <strong>R60</strong></li>
       </ol>
-      
       <div align="center" style="margin-top: 15px;">
         <a href="orders.html" class="btn-primary">Order Now</a>
       </div>
@@ -64,7 +70,7 @@
     <!-- CARD 2: CHICKEN & CHIPS -->
     <div class="card" style="text-align: left;">
       <div align="center">
-        <img src="/Research/Images/chicken and chips.jpg" alt="Full Chicken and Chips Menu">
+        <img src="Images\chicken and chips.jpg" alt="Flame-grilled Chicken and Chips Box">
       </div>
       <h3 style="justify-content: flex-start;">Chicken & Chips Menu</h3>
       <ol style="padding-left: 20px; color: var(--text-main); font-size: 0.95rem; line-height: 1.8;">
@@ -77,10 +83,10 @@
       </div>
     </div>
 
-    <!-- CARD 3: SALSA MEALS -->
+    <!-- CARD 3: PAP MEALS -->
     <div class="card" style="text-align: left;">
       <div align="center">
-        <img src="/Research/Images/full chicken.jpg" alt="Salsa Meals">
+        <img src="Images\full chicken.jpg" alt="Quarter Chicken Pap Meal with Chakalaka">
       </div>
       <h3 style="justify-content: flex-start;">Pap Meals</h3>
       <ol style="padding-left: 20px; color: var(--text-main); font-size: 0.95rem; line-height: 1.8;">
@@ -95,13 +101,12 @@
 
   </div>
 
-  <!-- SECOND ROW OF MENU ITEMS -->
   <div class="category-container" style="padding-top: 0;">
     
-    <!-- CARD 4: VIENNA BOX MEALS -->
+    <!-- CARD 4: COMBO BOXES -->
     <div class="card" style="text-align: left;">
       <div align="center">
-        <img src="/Research/Images/Combo.jpg" alt="Vienna Box Meals">
+        <img src="Images\Combo.jpg" alt="Family Combo Sharing Meal Box">
       </div>
       <h3 style="justify-content: flex-start;">Vienna & Combo Boxes</h3>
       <ol style="padding-left: 20px; color: var(--text-main); font-size: 0.95rem; line-height: 1.8;">
@@ -113,10 +118,10 @@
       </div>
     </div>
 
-    <!-- CARD 6: EXTRA SIDES -->
+    <!-- CARD 5: EXTRA SIDES -->
     <div class="card" style="text-align: left;">
       <div align="center">
-        <img src="/Research/Images/LOGO.jpg" alt="Extra Sides">
+        <img src="Images\LOGO.jpg" alt="Mutumane Extra Sides Menu">
       </div>
       <h3 style="justify-content: flex-start;">Extra Sides</h3>
       <ol style="padding-left: 20px; color: var(--text-main); font-size: 0.95rem; line-height: 1.8;">
@@ -132,10 +137,8 @@
   </div>
 
   <br style="clear: both;">
-  <hr>
-
-  <!-- FOOTER -->
-  <footer align="center">
+  
+  <footer>
     <p>&copy; 2026 Mutumane Kota 'N' Grilled Chicken. All Rights Reserved.</p>
   </footer>
 

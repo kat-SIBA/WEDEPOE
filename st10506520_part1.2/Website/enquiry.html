@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Send general queries, feedback, or sponsorship requests to Mutumane Kota 'N' Grilled Chicken.">
   <title>General Enquiry | Mutumane Kota 'N' Grilled Chicken</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -12,17 +14,17 @@
   <header>
     <div>
       <a href="index.html">
-        <img src="/Research/Images/LOGO.jpg" alt="Mutumane Logo" width="40" height="40" align="left">
+        <img src="Images\LOGO.jpg" alt="Mutumane Logo" width="40" height="40" align="left">
         <strong>MUTUMANE KOTA 'N' GRILLED CHICKEN</strong>
       </a>
-      <nav align="right">
+      <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="menu.html">Menu</a></li>
           <li><a href="orders.html">Orders</a></li>
           <li><a href="aboutUs.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="enquiry.html" style="background-color: var(--fiery-orange); color: var(--white);">Enquiry</a></li>
+          <li><a href="enquiry.html" class="active">Enquiry</a></li>
         </ul>
       </nav>
     </div>
@@ -41,15 +43,15 @@
   <div style="max-width: 700px; margin: 30px auto; background-color: var(--charcoal); padding: 30px; border-radius: 8px; border: 1px solid #333;">
     <h3 style="color: var(--warm-yellow); border-bottom: 1px solid #444; padding-bottom: 8px; margin-top: 0;">Location and Details</h3>
 
-    <form action="#" method="post">
+    <form action="#" method="post" id="enquiryForm" novalidate>
       <p>
-        <label for="fullname"><strong>Fullname:</strong></label><br>
+        <label for="fullname"><strong>Full Name:</strong></label><br>
         <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
       </p>
 
       <p>
-        <label for="contactInfo"><strong>Contact Info:</strong></label><br>
-        <input type="text" id="contactInfo" name="contactInfo" placeholder="Phone number or email" required>
+        <label for="contactInfo"><strong>Contact Info (Email or Phone):</strong></label><br>
+        <input type="tel" id="contactInfo" name="contactInfo" placeholder="0813572265" required>
       </p>
 
       <p>
@@ -62,17 +64,16 @@
         <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
       </p>
 
-          <div align="center" style="margin-top: 20px;">
-            <input type="submit" value="SEND ENQUIRY" class="btn-primary" style="width: 100%; padding: 14px; font-size: 1.1rem; cursor: pointer;">
-          </div>
-        </form>
+      <div align="center" style="margin-top: 20px;">
+        <input type="submit" value="SEND ENQUIRY" class="btn-primary" style="width: 100%; padding: 14px; font-size: 1.1rem; cursor: pointer;">
       </div>
+    </form>
+  </div>
 
-      <br style="clear: both;">
-    <hr>
-
+  <br style="clear: both;">
+  
   <!-- FOOTER -->
-  <footer align="center">
+  <footer>
     <p>&copy; 2026 Mutumane Kota 'N' Grilled Chicken. All Rights Reserved.</p>
   </footer>
 

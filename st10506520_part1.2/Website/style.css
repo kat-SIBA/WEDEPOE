@@ -1,432 +1,292 @@
-/* ==========================================
-   MUTUMANE KOTA 'N' GRILLED CHICKEN - GLOBAL STYLES
-   Color Scheme: 
-   - Warm Charcoal Gray: #1E1E1E
-   - Fiery Orange: #E65100
-   - Warm Yellow: #FFB300
-   ================================---------- */
+/* =========================================================
+   MUTUMANE KOTA 'N' GRILLED CHICKEN - STYLESHEET
+   ========================================================= */
 
 :root {
-  --charcoal: #1E1E1E;
-  --charcoal-light: #2A2A2A;
-  --fiery-orange: #E65100;
-  --fiery-orange-hover: #C44300;
-  --warm-yellow: #FFB300;
-  --warm-yellow-hover: #E09E00;
-  --bg-color: #121212;
-  --text-main: #E0E0E0;
-  --text-muted: #AAAAAA;
-  --white: #FFFFFF;
+    --black: #0b0b0b;
+    --charcoal: #121212;
+    --charcoal-light: #1a1a1a;
+    --fiery-orange: #ff5a00;
+    --orange-dark: #d94300;
+    --fiery-orange-hover: #ff6a16;
+    --warm-yellow: #ffc107;
+    --white: #ffffff;
+    --text-main: #eeeeee;
+    --text-muted: #cccccc;
+    --border-color: rgba(255, 255, 255, 0.12);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
 }
 
-/* Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-  background-color: var(--bg-color);
-  color: var(--text-main);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
+    background-color: var(--black);
+    color: var(--text-main);
+    font-family: 'Plus Jakarta Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
 }
 
-/* Links */
 a {
-  color: var(--warm-yellow);
-  text-decoration: none;
-  transition: color 0.2s ease;
+    color: var(--warm-yellow);
+    text-decoration: none;
+    transition: color 0.25s ease;
 }
 
 a:hover {
-  color: var(--fiery-orange);
-  text-decoration: underline;
+    color: var(--fiery-orange);
 }
 
-/* Header & Navigation Bar */
+/* Header & Left-Aligned Navigation */
 header {
-  background-color: var(--charcoal);
-  border-bottom: 3px solid var(--fiery-orange);
-  padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--charcoal);
+    border-bottom: 3px solid var(--fiery-orange);
+    padding: 15px 30px;
 }
 
 header div {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
-header img {
-  border-radius: 50%;
-  border: 2px solid var(--warm-yellow);
-  object-fit: cover;
-}
-
-header strong {
-  color: var(--warm-yellow);
-  font-size: 1.25rem;
-  letter-spacing: 0.5px;
-  margin-left: 10px;
+header nav {
+    margin-left: 0;
 }
 
 nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 15px;
-  align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    align-items: center;
 }
 
 nav ul li a {
-  color: var(--text-main);
-  font-weight: 600;
-  padding: 6px 12px;
-  border-radius: 4px;
-  transition: background-color 0.2s, color 0.2s;
+    display: block;
+    padding: 8px 14px;
+    border-radius: 6px;
+    color: var(--white);
+    font-size: 0.9rem;
+    font-weight: 700;
 }
 
 nav ul li a:hover {
-  background-color: var(--fiery-orange);
-  color: var(--white);
-  text-decoration: none;
+    background-color: var(--fiery-orange);
+    color: var(--white);
 }
 
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-  color: var(--warm-yellow);
-  text-transform: uppercase;
-  letter-spacing: 1px;
+nav ul li a.active {
+    background: linear-gradient(135deg, var(--fiery-orange), var(--orange-dark));
+    color: var(--white);
+    box-shadow: 0 4px 12px rgba(255, 90, 0, 0.4);
 }
 
-h1 {
-  font-size: 2.2rem;
-  margin: 15px 0 10px 0;
-  color: var(--warm-yellow);
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
-}
-
-h2 {
-  text-align: center;
-  color: var(--warm-yellow);
-  margin-top: 30px;
-  font-size: 1.8rem;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
-}
-
-h3 {
-  font-size: 1.1rem;
-  margin: 12px 0 8px 0;
-  min-height: 2.4em; /* Keeps card titles aligned even if 1 or 2 lines */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Structural Elements */
-hr {
-  border: 0;
-  height: 2px;
-  background: linear-gradient(to right, transparent, var(--fiery-orange), transparent);
-  margin: 25px 0;
-}
-
-/* Paragraphs & Text Elements */
-p {
-  color: var(--text-main);
-  font-size: 1rem;
-}
-
-strong {
-  color: var(--warm-yellow);
-}
-
-/* Hero Section Polish */
+/* Hero Section */
 .hero-section {
-  text-align: center;
-  padding: 40px 20px;
-  background: linear-gradient(to bottom, var(--charcoal), var(--bg-color));
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #171717, #090909);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .hero-logo {
-  border-radius: 50%;
-  border: 3px solid var(--warm-yellow);
-  box-shadow: 0 0 15px rgba(230, 81, 0, 0.4);
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--warm-yellow);
+    box-shadow: 0 0 30px rgba(255, 90, 0, 0.5);
+    margin-bottom: 20px;
+    cursor: pointer;
 }
 
-/* Menu Category & Feature Cards Layout */
-.category-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 10px 20px 40px 20px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: center;
-  gap: 20px;
+.hero-section h1 {
+    color: var(--white);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.1;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 15px;
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex: 1 1 300px; /* Allows cards to grow and shrink evenly with a base width */
-  max-width: 350px;
-  text-align: center;
-  padding: 20px;
-  background-color: var(--charcoal);
-  border-radius: 8px;
-  border: 1px solid #333;
-  box-sizing: border-box;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-  transition: transform 0.3s ease, border-color 0.3s ease;
+.hero-section p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 25px;
 }
 
-.card ol, 
-.card ul {
-  flex-grow: 1;
-  text-align: left; /* Keeps your menu lists neatly aligned to the left inside the centered card */
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  border-color: var(--fiery-orange);
-}
-
-.card img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 2px solid var(--warm-yellow);
-  object-fit: cover;
-  margin: 0 auto 10px auto;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
-}
-
-.card p {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-  margin-bottom: 15px;
-}
-
-/* Call to Action Buttons */
-.btn-primary {
-  background-color: var(--fiery-orange);
-  color: var(--white);
-  padding: 10px 20px;
-  border-radius: 4px;
-  font-weight: bold;
-  text-transform: uppercase;
-  display: inline-block;
-  text-decoration: none;
-  transition: background-color 0.2s ease, transform 0.1s ease;
-  border: none;
-  cursor: pointer;
-  font-size: 0.95rem;
+/* Buttons */
+.btn-primary, .btn {
+    display: inline-block;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, var(--fiery-orange), var(--orange-dark));
+    color: var(--white);
+    font-size: 0.9rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 90, 0, 0.3);
+    transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .btn-primary:hover {
-  background-color: var(--fiery-orange-hover);
-  color: var(--white);
-  text-decoration: none;
-  transform: translateY(-1px);
+    background: linear-gradient(135deg, var(--fiery-orange-hover), var(--fiery-orange));
+    transform: translateY(-2px);
 }
 
-/* Form Elements (Contact / Enquiry / Orders) */
+/* Cards & Grid */
+.category-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 300px;
+    max-width: 350px;
+    padding: 20px;
+    background-color: var(--charcoal);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--warm-yellow);
+    margin: 0 auto 15px auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.card img:hover {
+    transform: scale(1.08);
+}
+
+.card h3 {
+    color: var(--warm-yellow);
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+}
+
+.card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+/* Form Styling */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
 select,
 textarea {
-  width: 100%;
-  padding: 12px;
-  margin: 8px 0 16px 0;
-  display: inline-block;
-  border: 1px solid #444;
-  border-radius: 4px;
-  box-sizing: border-box;
-  background-color: var(--charcoal-light);
-  color: var(--white);
-  font-size: 1rem;
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #444444;
+    border-radius: 6px;
+    background-color: var(--charcoal-light);
+    color: var(--white);
+    font-size: 1rem;
+    margin-top: 5px;
+    margin-bottom: 15px;
 }
 
 input:focus, select:focus, textarea:focus {
-  outline: none;
-  border-color: var(--warm-yellow);
-  box-shadow: 0 0 5px rgba(255, 179, 0, 0.4);
+    outline: none;
+    border-color: var(--warm-yellow);
 }
 
-/* Tables */
-table {
-  width: 90%;
-  max-width: 1000px;
-  margin: 20px auto;
-  border-collapse: collapse;
-  background-color: var(--charcoal);
-  border-radius: 6px;
-  overflow: hidden;
+/* Gallery Lightbox Modal */
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-th, td {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid #333;
+.lightbox-modal img {
+    max-width: 90%;
+    max-height: 80vh;
+    border: 3px solid var(--warm-yellow);
+    border-radius: 8px;
+    box-shadow: 0 0 25px rgba(255, 90, 0, 0.6);
 }
 
-th {
-  background-color: var(--fiery-orange);
-  color: var(--white);
-  text-transform: uppercase;
-  font-size: 0.9rem;
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: var(--white);
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-tr:hover {
-  background-color: var(--charcoal-light);
+.lightbox-caption {
+    margin-top: 15px;
+    color: var(--warm-yellow);
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 /* Footer */
 footer {
-  background-color: var(--charcoal);
-  color: var(--text-muted);
-  padding: 20px;
-  border-top: 3px solid var(--warm-yellow);
-  margin-top: 40px;
-  font-size: 0.9rem;
-  text-align: center;
+    background-color: var(--charcoal);
+    color: var(--text-muted);
+    padding: 25px 20px;
+    border-top: 3px solid var(--warm-yellow);
+    margin-top: 60px;
+    text-align: center;
+    font-size: 0.9rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 footer p {
-  color: var(--text-muted);
-  margin: 0;
+    color: var(--text-muted);
+    margin: 0;
 }
-
-/* Responsive Adjustments for Mobile Screens */
-@media screen and (max-width: 768px) {
-  header div {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  nav ul {
-    margin-top: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  /* Make category cards stack full width on mobile */
-  .card {
-    width: 90% !important;
-    display: block !important;
-    margin: 15px auto !important;
-
-  }
-
-  /* --- CARD & IMAGE ZOOM EFFECT --- */
-
-/* 1. Ensure the card hides anything that zooms outside its borders */
-.card {
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-/* 2. Style the image transition */
-.card img {
-  transition: transform 0.4s ease-in-out;
-  display: block; /* Removes unwanted bottom spacing under inline images */
-}
-
-/* 3. Trigger the zoom when hovering over the card */
-.card:hover img {
-  transform: scale(1.25);
-}
-.about-container {
-  max-width: 900px; 
-  margin: 0 auto; 
-  background-color: var(--charcoal); 
-  padding: 40px; 
-  border-radius: 8px; 
-  border: 1px solid #333;
-}
-
-.about-image {
-  display: inline-block; 
-  width: 35%; 
-  vertical-align: middle; 
-  text-align: center;
-}
-
-.about-text {
-  display: inline-block; 
-  width: 60%; 
-  vertical-align: middle; 
-  padding-left: 20px; 
-  box-sizing: border-box;
-}
-
-/* Responsive layout for Mobile & Tablet */
-@media screen and (max-width: 768px) {
-  .about-container {
-    padding: 20px;
-  }
-  
-  .about-image, 
-  .about-text {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding-left: 0;
-  }
-
-  .about-image {
-    margin-bottom: 20px;
-  }
-
-  .about-text {
-    text-align: left;
-  }
-}
-
-/* --- RESPONSIVE SAUCE & TOPPING OPTIONS --- */
-.options-group {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile/tablet */
-  gap: 12px 15px;
-  margin-top: 10px;
-}
-
-.option-item {
-  display: flex;
-  align-items: center;
-  background-color: var(--charcoal-light);
-  padding: 10px 12px;
-  border-radius: 4px;
-  border: 1px solid #444;
-  cursor: pointer;
-}
-
-.option-item input[type="radio"],
-.option-item input[type="checkbox"] {
-  margin-right: 10px;
-  accent-color: var(--fiery-orange);
-  transform: scale(1.1); /* Slightly larger for easier mobile tapping */
-}
-
-.option-item label {
-  color: var(--text-main);
-  font-size: 0.95rem;
-  cursor: pointer;
-}
-
-/* Full width option on smaller screens if needed */
-@media screen and (max-width: 480px) {
-  .options-group {
-    grid-template-columns: 1fr; /* Stacks into 1 single column on very small phones */
-  }
-}
-
-}
-
