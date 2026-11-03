@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://yourusername.github.io/Mutumane-Kota-Website/index.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://yourusername.github.io/Mutumane-Kota-Website/menu.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yourusername.github.io/Mutumane-Kota-Website/orders.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yourusername.github.io/Mutumane-Kota-Website/aboutUs.html</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://yourusername.github.io/Mutumane-Kota-Website/contact.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://yourusername.github.io/Mutumane-Kota-Website/enquiry.html</loc>
+    <priority>0.6</priority>
+  </url>
+</urlset>
