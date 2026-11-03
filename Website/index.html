@@ -10,14 +10,24 @@
 </head>
 <body>
 
-  <!-- HEADER & NAVIGATION -->
+  <!-- LOGO & NAVIGATION BAR -->
   <header>
     <div>
-      <a href="index.html">
-        <img src="Images/LOGO.jpg" alt="Mutumane Logo" width="40" height="40" align="left">
-        <strong>MUTUMANE KOTA 'N' GRILLED CHICKEN</strong>
+      <!-- Brand Logo & Title -->
+      <a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+        <img src="Research/Images/LOGO.jpg" alt="Mutumane Logo" width="40" height="40" style="border-radius: 50%; border: 2px solid var(--warm-yellow);">
+        <strong style="color: var(--white); font-size: 0.85rem;">MUTUMANE KOTA 'N' GRILLED CHICKEN</strong>
       </a>
-      <nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="hamburger-toggle" aria-label="Toggle navigation menu" onclick="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Navigation Links -->
+      <nav id="mainNav">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="menu.html">Menu</a></li>

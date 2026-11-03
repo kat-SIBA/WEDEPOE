@@ -300,3 +300,11 @@ function setupEnquiryFormValidation() {
     enquiryForm.reset();
   });
 }
+
+/* Mobile Hamburger Menu Toggle Function */
+function toggleMobileMenu() {
+  const nav = document.getElementById("mainNav");
+  if (nav) {
+    nav.classList.toggle("nav-open");
+  }
+}
